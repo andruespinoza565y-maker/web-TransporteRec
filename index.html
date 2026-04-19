@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>R.E.C. SRL | Transporte Nacional e Internacional</title>
+<title>R.E.C. SRL | Transporte Internacional</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -23,20 +23,19 @@ width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 60px;
-background:rgba(0,0,0,0.7);
+padding:18px 60px;
+background:rgba(0,0,0,0.6);
 backdrop-filter:blur(10px);
 z-index:1000;
 }
 
-.logo img{
-height:50px;
-}
+.logo img{height:55px;}
 
 nav a{
 margin-left:25px;
 color:#fff;
 text-decoration:none;
+font-size:14px;
 transition:0.3s;
 }
 
@@ -46,111 +45,99 @@ nav a:hover{color:#00d4ff;}
 .hero{
 height:100vh;
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
 background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
-url('https://images.unsplash.com/photo-1566576912321-d58ddd7a6088');
+url('https://images.unsplash.com/photo-1549921296-3a6b8b8c3a0b');
 background-size:cover;
-background-position:center;
-animation:fadeIn 1.5s ease;
 }
 
 .hero h1{
-font-size:50px;
-margin-bottom:15px;
+font-size:60px;
+max-width:800px;
 }
 
+.hero span{color:#00d4ff;}
+
 .hero p{
-max-width:600px;
+margin-top:20px;
 opacity:0.85;
 }
 
 .btn{
-margin-top:20px;
-padding:14px 30px;
+margin-top:30px;
+padding:14px 35px;
 background:#00d4ff;
 border:none;
-color:#000;
-font-weight:600;
 border-radius:10px;
+font-weight:600;
 cursor:pointer;
-transition:0.3s;
 }
 
 .btn:hover{background:#00a6cc;}
 
 /* SECCIONES */
-section{
-padding:100px 60px;
-}
+section{padding:100px 60px;}
 
-.container{
-max-width:1200px;
-margin:auto;
-}
+.container{max-width:1200px;margin:auto;}
 
-h2{
-text-align:center;
-margin-bottom:40px;
-color:#00d4ff;
-}
+h2{text-align:center;margin-bottom:50px;color:#00d4ff;}
 
 /* CARDS */
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+gap:30px;
 }
 
 .card{
 background:#111827;
-padding:25px;
-border-radius:12px;
+padding:30px;
+border-radius:15px;
 transition:0.3s;
-opacity:0;
-transform:translateY(30px);
 }
 
-.card.show{
-opacity:1;
-transform:translateY(0);
+.card:hover{transform:translateY(-10px);}
+
+.card h3{color:#00d4ff;margin-bottom:10px;}
+
+/* STATS */
+.stats{
+display:flex;
+justify-content:space-around;
+flex-wrap:wrap;
+text-align:center;
 }
 
-.card:hover{
-transform:translateY(-8px);
+.stat{
+margin:20px;
 }
 
-.card h3{
+.stat h3{
+font-size:30px;
 color:#00d4ff;
-margin-bottom:10px;
+}
+
+/* COBERTURA */
+.coverage{
+text-align:center;
+opacity:0.85;
 }
 
 /* NOSOTROS */
 .about{
-text-align:center;
 max-width:800px;
 margin:auto;
-line-height:1.6;
-opacity:0.9;
-}
-
-/* LOGO CENTER */
-.logo-center{
 text-align:center;
-margin-top:40px;
-}
-
-.logo-center img{
-width:180px;
+line-height:1.6;
 }
 
 /* FOOTER */
 footer{
 background:#020617;
+padding:30px;
 text-align:center;
-padding:20px;
 opacity:0.6;
 }
 
@@ -163,79 +150,94 @@ background:#25D366;
 padding:15px;
 border-radius:50%;
 color:#fff;
-font-size:20px;
-text-decoration:none;
 }
 
 /* ANIMACIÓN */
-@keyframes fadeIn{
-from{opacity:0;transform:translateY(20px);}
-to{opacity:1;transform:translateY(0);}
+.fade{
+opacity:0;
+transform:translateY(30px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
 }
 </style>
-
 </head>
 
 <body>
 
 <header>
-<div class="logo">
-<img src="logo.png" alt="REC SRL">
-</div>
+<div class="logo"><img src="logo.png"></div>
 <nav>
 <a href="#inicio">Inicio</a>
 <a href="#servicios">Servicios</a>
+<a href="#flota">Flota</a>
 <a href="#nosotros">Nosotros</a>
 <a href="#contacto">Contacto</a>
 </nav>
 </header>
 
 <section class="hero" id="inicio">
-<h1>Transporte Nacional e Internacional</h1>
-<p>Soluciones logísticas seguras, eficientes y confiables desde Cochabamba para todo Bolivia y el exterior.</p>
-<button class="btn" onclick="scrollToContact()">Solicitar Cotización</button>
+<div>
+<h1>Transporte Internacional <span>Seguro & Confiable</span></h1>
+<p>Conectamos Bolivia con el mundo mediante soluciones logísticas modernas y eficientes.</p>
+<button class="btn" onclick="scrollToContact()">Cotizar ahora</button>
+</div>
 </section>
 
-<section id="servicios">
+<section id="servicios" class="fade">
 <div class="container">
 <h2>Servicios</h2>
 <div class="cards">
 <div class="card">
-<h3>Transporte Nacional</h3>
-<p>Movilización de carga pesada a nivel nacional con máxima seguridad.</p>
-</div>
-<div class="card">
 <h3>Transporte Internacional</h3>
-<p>Operaciones logísticas hacia países vecinos con control total.</p>
+<p>Operaciones logísticas hacia mercados internacionales.</p>
 </div>
 <div class="card">
-<h3>Logística Empresarial</h3>
-<p>Optimización de rutas, tiempos y costos para tu negocio.</p>
+<h3>Carga Pesada</h3>
+<p>Movilización de mercancía con equipos especializados.</p>
+</div>
+<div class="card">
+<h3>Logística Integral</h3>
+<p>Soluciones completas de transporte y distribución.</p>
 </div>
 </div>
 </div>
 </section>
 
-<section id="nosotros">
+<section class="stats fade">
+<div class="stat"><h3>+10</h3><p>Años experiencia</p></div>
+<div class="stat"><h3>+500</h3><p>Clientes</p></div>
+<div class="stat"><h3>24/7</h3><p>Operación</p></div>
+</section>
+
+<section id="flota" class="fade">
+<div class="container">
+<h2>Nuestra Flota</h2>
+<p class="coverage">
+Contamos con unidades modernas y equipadas para transporte nacional e internacional,
+garantizando seguridad, eficiencia y cumplimiento en cada operación.
+</p>
+</div>
+</section>
+
+<section id="nosotros" class="fade">
 <div class="container">
 <h2>Nosotros</h2>
 <p class="about">
-R.E.C. SRL es una empresa de transporte nacional e internacional con base en Cochabamba - Bolivia, dedicada a brindar soluciones logísticas eficientes y seguras.
-<br><br>
-Contamos con experiencia en el traslado de carga pesada, garantizando puntualidad, responsabilidad y confianza en cada servicio.
+R.E.C. SRL es una empresa boliviana especializada en transporte nacional e internacional,
+con base en Cochabamba. Nos destacamos por ofrecer soluciones logísticas confiables,
+optimizando tiempos y garantizando la seguridad de cada carga.
 </p>
-
-<div class="logo-center">
-<img src="logo.png">
-</div>
-
 </div>
 </section>
 
-<section id="contacto">
+<section id="contacto" class="fade">
 <div class="container">
 <h2>Contacto</h2>
-<p style="text-align:center;">Contáctanos para cotizaciones y más información</p>
+<p style="text-align:center;">Solicita información o cotización personalizada</p>
 <div style="text-align:center;margin-top:20px;">
 <button class="btn" onclick="whatsapp()">WhatsApp</button>
 </div>
@@ -243,30 +245,26 @@ Contamos con experiencia en el traslado de carga pesada, garantizando puntualida
 </section>
 
 <footer>
-© 2026 R.E.C. SRL - Cochabamba, Bolivia
+© 2026 R.E.C. SRL | Transporte Internacional
 </footer>
 
 <a href="#" class="whatsapp">💬</a>
 
 <script>
-// animación cards
-const cards = document.querySelectorAll('.card');
+const fades=document.querySelectorAll('.fade');
 
-window.addEventListener('scroll', () => {
-cards.forEach(card => {
-const top = card.getBoundingClientRect().top;
-if(top < window.innerHeight - 50){
-card.classList.add('show');
+window.addEventListener('scroll',()=>{
+fades.forEach(el=>{
+if(el.getBoundingClientRect().top < window.innerHeight - 50){
+el.classList.add('show');
 }
 });
 });
 
-// scroll contacto
 function scrollToContact(){
 document.getElementById("contacto").scrollIntoView({behavior:"smooth"});
 }
 
-// whatsapp (cambiar número)
 function whatsapp(){
 window.open("https://wa.me/591XXXXXXXX","_blank");
 }
