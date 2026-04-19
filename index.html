@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaTrans | Transporte & Logística</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+background:#0b0f1a;
+color:#fff;
+scroll-behavior:smooth;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:22px;
+font-weight:600;
+color:#00d4ff;
+}
+
+nav a{
+margin-left:30px;
+color:#fff;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav a:hover{color:#00d4ff;}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.hero p{
+max-width:600px;
+opacity:0.8;
+}
+
+.btn{
+margin-top:25px;
+padding:14px 30px;
+border:none;
+background:#00d4ff;
+color:#000;
+font-weight:600;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#00a6cc;
+}
+
+section{
+padding:100px 60px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+margin-bottom:50px;
+color:#00d4ff;
+font-size:32px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:#111827;
+padding:30px;
+border-radius:15px;
+transition:0.3s;
+box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+margin-bottom:10px;
+color:#00d4ff;
+}
+
+.about{
+text-align:center;
+max-width:800px;
+margin:auto;
+opacity:0.85;
+line-height:1.6;
+}
+
+.stats{
+display:flex;
+justify-content:space-around;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.stat{
+text-align:center;
+margin:20px;
+}
+
+.stat h3{
+font-size:28px;
+color:#00d4ff;
+}
+
+.contact-box{
+text-align:center;
+}
+
+footer{
+background:#020617;
+text-align:center;
+padding:25px;
+opacity:0.6;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px;
+border-radius:50%;
+font-size:22px;
+text-decoration:none;
+color:#fff;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="logo">NovaTrans</div>
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#servicios">Servicios</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#contacto">Contacto</a>
+</nav>
+</header>
+
+<section class="hero" id="inicio">
+<h1>Transporte Seguro & Eficiente</h1>
+<p>Movemos tu carga con precisión, tecnología y confianza. Soluciones logísticas diseñadas para empresas modernas.</p>
+<button class="btn" onclick="scrollToSection()">Cotizar ahora</button>
+</section>
+
+<section id="servicios">
+<div class="container">
+<h2>Servicios</h2>
+<div class="cards">
+<div class="card">
+<h3>Transporte Nacional</h3>
+<p>Distribución eficiente en todo el país con seguimiento constante.</p>
+</div>
+<div class="card">
+<h3>Logística Empresarial</h3>
+<p>Optimización de rutas, reducción de costos y máxima eficiencia.</p>
+</div>
+<div class="card">
+<h3>Monitoreo GPS</h3>
+<p>Seguimiento en tiempo real para total tranquilidad.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="nosotros">
+<div class="container">
+<h2>Nosotros</h2>
+<p class="about">
+En NovaTrans somos especialistas en transporte y logística, enfocados en brindar soluciones modernas, seguras y eficientes. 
+Nuestra flota y equipo profesional garantizan puntualidad, control y confianza en cada operación.
+<br><br>
+Trabajamos con tecnología de monitoreo y procesos optimizados para asegurar la satisfacción total de nuestros clientes.
+</p>
+
+<div class="stats">
+<div class="stat">
+<h3>+500</h3>
+<p>Clientes satisfechos</p>
+</div>
+<div class="stat">
+<h3>+10 años</h3>
+<p>Experiencia</p>
+</div>
+<div class="stat">
+<h3>24/7</h3>
+<p>Soporte</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="contacto">
+<div class="container contact-box">
+<h2>Contacto</h2>
+<p>Solicita tu cotización o más información</p>
+<button class="btn" onclick="contacto()">Contactar</button>
+</div>
+</section>
+
+<footer>
+© 2026 NovaTrans - Todos los derechos reservados
+</footer>
+
+<a href="#" class="whatsapp">💬</a>
+
+<script>
+function scrollToSection(){
+document.getElementById("contacto").scrollIntoView({behavior:"smooth"});
+}
+
+function contacto(){
+alert("Aquí puedes conectar WhatsApp o formulario");
+}
+</script>
+
+</body>
+</html>
